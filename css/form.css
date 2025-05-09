@@ -1,0 +1,155 @@
+.contactToggleButton {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 64px;
+  height: 64px;
+  background-color: #083344;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 8px 8px 8px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contactToggleButton:hover { 
+  transform: scale(1.1);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+  padding: 0 calc(100% / 16);
+  z-index: 4;
+}
+
+.modal[aria-hidden="false"] { 
+  display: flex; 
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 512px;
+  padding: 32px;
+  animation: fadeUp 0.5s ease-out;
+}
+
+.modal-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 16px; 
+}
+
+.modal-header h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.close-button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); 
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-group {
+  margin-bottom: 8px;
+  min-height: 64px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: none;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+button[type="submit"] {
+  display: block;
+  margin: 16px auto 0 auto;
+  background-color: #083344;
+  color: #ffffff;
+  border: none;
+  padding: 12px 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  transition: transform 0.5s ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-4px); }
+
+.toast {
+  position: fixed;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #808080;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: none;
+  z-index: 5;
+  font-weight: bold;
+}
+
+.toast.show {
+  display: block;
+}
+
+.toast.success {
+  background-color: #28a745;
+}
+
+.toast.error   {
+  background-color: #dc3545;
+}
+
+@media (max-width: 768px) {
+  
+  .contactToggleButton {
+    bottom: 16px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+  }
+
+}

@@ -1,0 +1,131 @@
+:root {
+  --primary-color: #004080;
+  --light-bg: #f5f8ff;
+  --text-color: #000000;
+  --muted-text: #6c757d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: 'Playfair Display', serif;
+  color: var(--text-color);
+  background: var(--light-bg);
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.site-header {
+  position: relative;
+  background: url('../jpeg/blogBackground.jpeg') center/cover no-repeat;
+  height: 512px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+  text-align: center;
+  z-index: 1;
+  max-width: 1024px;
+  margin: 0 calc(100% / 16);
+}
+
+.site-title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.site-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.navbar-custom {
+  background: #ffffff;
+}
+
+.navbar-custom .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.card-blog {
+  border: none;
+  box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.1);
+  background: #ffffff;
+  border-radius: 0.5rem;
+  transition: transform 0.5s ease;
+}
+
+.card-blog:hover {
+  transform: translateY(-4px);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-body small {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--muted-text);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--muted-text);
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.footer {
+  background: #ffffff;
+  padding: 1rem 0;
+}
+
+.footer small {
+  color: var(--text-color);
+  font-size: 1rem;
+}
